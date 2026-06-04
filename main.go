@@ -16,6 +16,12 @@ func main() {
 		return
 	}
 
+	if len(input) > 8 {
+		err = errors.New("input cannot be longer than 8 digits")
+		fmt.Println(err)
+		return
+	}
+
 	var dec int
 
 	for i, number := range input {
